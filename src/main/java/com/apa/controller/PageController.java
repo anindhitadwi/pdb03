@@ -11,4 +11,10 @@ public class PageController {
 		
 		return "index";
 	}
+	
+	@RequestMapping("/test")
+	public String test() {
+		
+		return "charts";
+	}
 }

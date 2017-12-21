@@ -11,7 +11,7 @@ public class WekaController {
 	@RequestMapping("/weka")
 	public String weka() {
 		
-		return "weka/main";
+		return "weka-main";
 	}
 	
 	@RequestMapping("/weka/{year}")
@@ -19,6 +19,6 @@ public class WekaController {
 		
 		model.addAttribute("year", year);
 		
-		return "weka/detail";
+		return "weka-detail";
 	}
 }
