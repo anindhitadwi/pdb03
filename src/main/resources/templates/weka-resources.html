@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 		<meta name="description" content=""/>
 		<meta name="author" content=""/>
-		<title>SB Admin - Start Bootstrap Template</title>
+		
 		<!-- Bootstrap core CSS-->
 		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 		<!-- Custom fonts for this template-->
@@ -34,14 +34,25 @@
 		<!-- Bootstrap core JavaScript-->
 		<script src="../vendor/jquery/jquery.min.js"></script>
 		<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		
 		<!-- Core plugin JavaScript-->
 		<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+		
 		<!-- Page level plugin JavaScript-->
 		<script src="../vendor/chart.js/Chart.min.js"></script>
+		
 		<!-- Custom scripts for all pages-->
 		<script src="../js/sb-admin.min.js"></script>
+		
 		<!-- Custom scripts for this page-->
 		<!-- <script src="../js/sb-admin-charts.min.js"></script> -->
+		
+		<!-- Page level plugin JavaScript-->
+	    <script src="vendor/datatables/jquery.dataTables.js"></script>
+	    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+	    
+	    <!-- Custom scripts for this page-->
+	    <script src="js/sb-admin-datatables.min.js"></script>
 	</div>
 	
 	<div th:fragment="navigation">
@@ -53,30 +64,225 @@
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarResponsive">
 		      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
-		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Spark">
-		          <a class="nav-link" href="index.html">
+		        	        		        
+		        <!-- WEKA STATISTICS  -->
+		        
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+		          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti" data-parent="#exampleAccordion">
 		            <i class="fa fa-fw fa-dashboard"></i>
-		            <span class="nav-link-text">Spark</span>
+		            <span class="nav-link-text">Weka Statistics</span>
 		          </a>
+		          <ul class="sidenav-second-level collapse" id="collapseMulti">
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti1">2005</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti1">
+		                <li>
+		                  <a th:href="'/weka-skm/2005'">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a th:href="'/weka-em/2005'">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">2006</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti2">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3">2007</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti3">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4">2008</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti4">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5">2009</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti5">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti6">2010</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti6">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti7">2011</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti7">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti8">2012</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti8">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti9">2013</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti9">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti10">2014</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti10">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti11">2015</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti11">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti12">2016</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti12">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		            
+		            <li>
+		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti13">2017</a>
+		              <ul class="sidenav-third-level collapse" id="collapseMulti13">
+		                <li>
+		                  <a href="#">Simple K-Means</a>
+		                </li>
+		                <li>
+		                  <a href="#">EM</a>
+		                </li>
+		              </ul>
+		            </li>
+		          </ul>
 		        </li>
-		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tensorflow">
-		          <a class="nav-link" href="index.html">
+		        
+		        <!-- TENSORFLOW -->
+		        
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">
+		          <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMultiTF" data-parent="#exampleAccordion">
 		            <i class="fa fa-fw fa-dashboard"></i>
-		            <span class="nav-link-text">Tensorflow</span>
+		            <span class="nav-link-text">Tensorflow Scatterplot</span>
 		          </a>
+		          <ul class="sidenav-second-level collapse" id="collapseMultiTF">
+		            <li>
+		              <a href="#">2005</a>
+		            </li>
+		            <li>
+		              <a href="#">2006</a>
+		            </li>
+		            <li>
+		              <a href="#">2007</a>
+		            </li>
+		            <li>
+		              <a href="#">2008</a>
+		            </li>
+		            <li>
+		              <a href="#">2009</a>
+		            </li>
+		            <li>
+		              <a href="#">2010</a>
+		            </li>
+		            <li>
+		              <a href="#">2011</a>
+		            </li>
+		            <li>
+		              <a href="#">2012</a>
+		            </li>
+		            <li>
+		              <a href="#">2013</a>
+		            </li>
+		            <li>
+		              <a href="#">2014</a>
+		            </li>
+		            <li>
+		              <a href="#">2015</a>
+		            </li>
+		            <li>
+		              <a href="#">2016</a>
+		            </li>
+		            <li>
+		              <a href="#">2017</a>
+		            </li>
+		          </ul>
 		        </li>
-		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Weka">
-		          <a class="nav-link" href="index.html">
-		            <i class="fa fa-fw fa-dashboard"></i>
-		            <span class="nav-link-text">Weka</span>
-		          </a>
-		        </li>
-		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Databricks">
-		          <a class="nav-link" href="index.html">
-		            <i class="fa fa-fw fa-dashboard"></i>
-		            <span class="nav-link-text">Databricks</span>
-		          </a>
-		        </li>
+		        
+		        <!--  -->
+		        
 		      </ul>
 		    </div>
 		  </nav>
