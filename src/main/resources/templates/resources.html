@@ -48,8 +48,8 @@
 		<!-- <script src="../js/sb-admin-charts.min.js"></script> -->
 		
 		<!-- Page level plugin JavaScript-->
-	    <script src="vendor/datatables/jquery.dataTables.js"></script>
-	    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+	    <script src="../vendor/datatables/jquery.dataTables.js"></script>
+	    <script src="../vendor/datatables/dataTables.bootstrap4.js"></script>
 	    
 	    <!-- Custom scripts for this page-->
 	    <script src="js/sb-admin-datatables.min.js"></script>
@@ -64,6 +64,15 @@
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarResponsive">
 		      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+		        
+		        <!-- HOME -->	
+		        
+		        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+		          <a class="nav-link" th:href="'/'">
+		            <i class="fa fa-fw fa-dashboard"></i>
+		            <span class="nav-link-text">Home</span>
+		          </a>
+		        </li>        		        
 		        	        		        
 		        <!-- WEKA STATISTICS  -->
 		        
@@ -89,10 +98,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti2">2006</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti2">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2006'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2006'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -101,10 +110,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti3">2007</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti3">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2007'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2007'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -113,10 +122,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti4">2008</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti4">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2008'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2008'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -125,10 +134,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti5">2009</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti5">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2009'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2009'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -137,10 +146,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti6">2010</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti6">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2010'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2010'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -149,10 +158,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti7">2011</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti7">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2011'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2011'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -161,10 +170,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti8">2012</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti8">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2012'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2012'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -173,10 +182,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti9">2013</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti9">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2013'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2013'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -185,10 +194,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti10">2014</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti10">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2014'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2014'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -197,10 +206,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti11">2015</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti11">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2015'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2015'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -209,10 +218,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti12">2016</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti12">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2016'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2016'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -221,10 +230,10 @@
 		              <a class="nav-link-collapse collapsed" data-toggle="collapse" href="#collapseMulti13">2017</a>
 		              <ul class="sidenav-third-level collapse" id="collapseMulti13">
 		                <li>
-		                  <a href="#">Simple K-Means</a>
+		                  <a th:href="'/weka-skm/2017'">Simple K-Means</a>
 		                </li>
 		                <li>
-		                  <a href="#">EM</a>
+		                  <a th:href="'/weka-em/2017'">EM</a>
 		                </li>
 		              </ul>
 		            </li>
@@ -240,43 +249,43 @@
 		          </a>
 		          <ul class="sidenav-second-level collapse" id="collapseMultiTF">
 		            <li>
-		              <a href="#">2005</a>
+		              <a th:href="'/tensorflow/2005'">2005</a>
 		            </li>
 		            <li>
-		              <a href="#">2006</a>
+		              <a th:href="'/tensorflow/2006'">2006</a>
 		            </li>
 		            <li>
-		              <a href="#">2007</a>
+		              <a th:href="'/tensorflow/2007'">2007</a>
 		            </li>
 		            <li>
-		              <a href="#">2008</a>
+		              <a th:href="'/tensorflow/2008'">2008</a>
 		            </li>
 		            <li>
-		              <a href="#">2009</a>
+		              <a th:href="'/tensorflow/2009'">2009</a>
 		            </li>
 		            <li>
-		              <a href="#">2010</a>
+		              <a th:href="'/tensorflow/2010'">2010</a>
 		            </li>
 		            <li>
-		              <a href="#">2011</a>
+		              <a th:href="'/tensorflow/2011'">2011</a>
 		            </li>
 		            <li>
-		              <a href="#">2012</a>
+		              <a th:href="'/tensorflow/2012'">2012</a>
 		            </li>
 		            <li>
-		              <a href="#">2013</a>
+		              <a th:href="'/tensorflow/2013'">2013</a>
 		            </li>
 		            <li>
-		              <a href="#">2014</a>
+		              <a th:href="'/tensorflow/2014'">2014</a>
 		            </li>
 		            <li>
-		              <a href="#">2015</a>
+		              <a th:href="'/tensorflow/2015'">2015</a>
 		            </li>
 		            <li>
-		              <a href="#">2016</a>
+		              <a th:href="'/tensorflow/2016'">2016</a>
 		            </li>
 		            <li>
-		              <a href="#">2017</a>
+		              <a th:href="'/tensorflow/2017'">2017</a>
 		            </li>
 		          </ul>
 		        </li>
