@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Weka Statistics 2005 - EM</title>
+	<title>Weka Statistics 2016 - SKM</title>
 	<div th:replace="resources :: assets"></div>
 </head>
 
@@ -15,8 +15,8 @@
     <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">Weka Statistics</li>
-        <li class="breadcrumb-item">2005</li>
-        <li class="breadcrumb-item">EM</li>
+        <li class="breadcrumb-item">2016</li>
+        <li class="breadcrumb-item">SKM</li>
       </ol>
     
     <!-- Area Chart Example-->  
@@ -25,7 +25,7 @@
           <!-- Example Pie Chart Card-->
           <div class="card mb-3">
             <div class="card-header">
-              <i class="fa fa-pie-chart"></i>Expectation-Minimization (in %)</div>
+              <i class="fa fa-pie-chart"></i>Simple K-Means (in %)</div>
             <div class="card-body">
               <canvas id="myPieChart" width="100%" height="30"></canvas>
             </div>
@@ -49,39 +49,49 @@
                   <th>Cluster 2</th>
                   <th>Cluster 3</th>
                   <th>Cluster 4</th>
+                  <th>Cluster 5</th>
+                  <th>Cluster 6</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>ItemType</td>
-                  <td>Kit: Adult/YA</td>
-                  <td>Catalog*</td>
-                  <td>Book: Adult/YA</td>
-                  <td>DVD: Juv Circulation</td>
+                  <td>CD: Adult/YA</td>
+                  <td>CD: Adult/YA</td>
+                  <td>CD: Adult/YA</td>
+                  <td>Framed Art: Adult/YA</td>
                   <td>CH1-Children's Seasonal*</td>
+                  <td>CD: Adult/YA</td>
+                  <td>Book: Juv</td>
                 </tr>
                 <tr>
                   <td>Collection</td>
-                  <td>CS 3 - MOB Mysteries</td>
-                  <td>Staff Operation on Process</td>
-                  <td>NA-Sci-Fi/Fantasy</td>
-                  <td>CC-Children's Easy Fiction</td>
-                  <td>NC-Easy Fiction</td>
+                  <td>NA-Audio Cassettes</td>
+                  <td>NA-Mysteries</td>
+                  <td>AfAm-Paperbacks</td>
+                  <td>CY3-Teen New Books</td>
+                  <td>NA-Children's Newbery/Caldecott</td>
+                  <td>NA-Mysteries</td>
+                  <td>NA-Children's Comics</td>
                 </tr>
                 <tr>
                   <td>CheckoutDateTime</td>
-                  <td>15:00 - 17:59</td>
                   <td>12:00 - 14:59</td>
                   <td>17:00 - 17:59</td>
+                  <td>17:00 - 17:59</td>
+                  <td>12:00 - 14:59</td>
+                  <td>12:00 - 14:59</td>
                   <td>12:00 - 14:59</td>
                   <td>12:00 - 14:59</td>
                 </tr>
                 <tr>
                   <td>Season</td>
-                  <td>Summer</td>
-                  <td>Summer</td>
-                  <td>Summer</td>
-                  <td>Summer</td>
+                  <td>Winter</td>
+                  <td>Spring</td>
+                  <td>Winter</td>
+                  <td>Fall</td>
+                  <td>Winter</td>
+                  <td>Spring</td>
                   <td>Summer</td>
                 </tr>
               </tbody>
@@ -93,7 +103,7 @@
       
       <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Mean
+          <i class="fa fa-table"></i> Value
         </div>
         <div class="card-body">
           <div class="table-responsive">
@@ -106,40 +116,50 @@
                   <th>Cluster 2</th>
                   <th>Cluster 3</th>
                   <th>Cluster 4</th>
+                  <th>Cluster 5</th>
+                  <th>Cluster 6</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>ItemType</td>
-                  <td>11.5246</td>
-                  <td>184.6598</td>
-                  <td>2.5967</td>
-                  <td>420.6062</td>
-                  <td>416.0149</td>
+                  <td>5.0786</td>
+                  <td>5.3272</td>
+                  <td>4.9362</td>
+                  <td>2.0891</td>
+                  <td>416.4197</td>
+                  <td>5.1701</td>
+                  <td>416.5522</td>
                 </tr>
                 <tr>
                   <td>Collection</td>
-                  <td>229.3726</td>
-                  <td>190.6148</td>
-                  <td>241.7913</td>
-                  <td>454.2172</td>
-                  <td>461.5839</td>
+                  <td>233.0992</td>
+                  <td>238.9959</td>
+                  <td>232.1178</td>
+                  <td>513.9838</td>
+                  <td>459.2886</td>
+                  <td>239.3378</td>
+                  <td>459.7466</td>
                 </tr>
                 <tr>
                   <td>CheckoutDateTime</td>
-                  <td>4.5899</td>
-                  <td>4.0041</td>
-                  <td>4.5381</td>
-                  <td>4.4895</td>
-                  <td>4.4785</td>
+                  <td>3.7113</td>
+                  <td>5.217</td>
+                  <td>5.1809</td>
+                  <td>4.4777</td>
+                  <td>4.4342</td>
+                  <td>3.7119</td>
+                  <td>4.4603</td>
                 </tr>
                 <tr>
                   <td>Season</td>
-                  <td>1.3981</td>
-                  <td>1.3937</td>
-                  <td>1.4786</td>
-                  <td>1.4527</td>
-                  <td>1.4837</td>
+                  <td>2.5039</td>
+                  <td>0.4664</td>
+                  <td>2.5092</td>
+                  <td>1.9595</td>
+                  <td>2.5054</td>
+                  <td>0.4988</td>
+                  <td>0.5373</td>
                 </tr>
               </tbody>
             </table>
@@ -148,65 +168,7 @@
         <div class="card-footer small text-muted"></div>
       </div>
       
-      <div class="card mb-3">
-        <div class="card-header">
-          <i class="fa fa-table"></i> Standard Deviation
-        </div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              <thead>
-                <tr>
-                  <th>Attribute</th>
-                  <th>Cluster 0</th>
-                  <th>Cluster 1</th>
-                  <th>Cluster 2</th>
-                  <th>Cluster 3</th>
-                  <th>Cluster 4</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>ItemType</td>
-                  <td>7.5145</td>
-                  <td>133.6202</td>
-                  <td>0.9396</td>
-                  <td>2.7616</td>
-                  <td>0.1214</td>
-                </tr>
-                <tr>
-                  <td>Collection</td>
-                  <td>229.3726</td>
-                  <td>190.6148</td>
-                  <td>241.7913</td>
-                  <td>454.2172</td>
-                  <td>461.5839</td>
-                </tr>
-                <tr>
-                  <td>CheckoutDateTime</td>
-                  <td>4.5899</td>
-                  <td>4.0041</td>
-                  <td>4.5381</td>
-                  <td>4.4895</td>
-                  <td>4.4785</td>
-                </tr>
-                <tr>
-                  <td>Season</td>
-                  <td>1.3981</td>
-                  <td>1.3937</td>
-                  <td>1.4786</td>
-                  <td>1.4527</td>
-                  <td>1.4837</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="card-footer small text-muted"></div>
-      </div>
-      
-      
-    
+        
       
     </div>
     <!-- /.container-fluid-->
@@ -237,11 +199,11 @@ var ctx = document.getElementById("myPieChart"),
 		ctx, {
 			type : "pie",
 			data : {
-				labels : [ "Cluster 0", "Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4" ],
+				labels : [ "Cluster 0", "Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5", "Cluster 6"],
 				datasets : [ {
-					data : [ 20, 1, 5, 7, 20 ],
+					data : [ 16, 17, 15, 2, 17, 17, 17 ],
 					backgroundColor : [ "#007bff", "#dc3545", "#ffc107",
-							"#28a745", "#add8e6" ]
+							"#28a745", "#add8e6", "#ff00ff", "#008080"]
 				} ]
 			}
 		});
