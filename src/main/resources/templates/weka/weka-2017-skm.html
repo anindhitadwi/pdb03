@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Weka Statistics 2017 - SKM</title>
+	<div th:replace="resources :: assets"></div>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <div th:replace="resources :: navigation"></div>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+    <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Weka Statistics</li>
+        <li class="breadcrumb-item">2017</li>
+        <li class="breadcrumb-item">SKM</li>
+      </ol>
+    
+    <!-- Area Chart Example-->  
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Example Pie Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-pie-chart"></i>Simple K-Means (in %)</div>
+            <div class="card-body">
+              <canvas id="myPieChart" width="100%" height="30"></canvas>
+            </div>
+            <div class="card-footer small text-muted"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Representation
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>Cluster 0</th>
+                  <th>Cluster 1</th>
+                  <th>Cluster 2</th>
+                  <th>Cluster 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ItemType</td>
+                  <td>Audio Tape: Adult/YA</td>
+                  <td>Audio Tape: Adult/YA</td>
+                  <td>On Order*</td>
+                  <td>CH1 - Children's Seasonal*</td>
+                </tr>
+                <tr>
+                  <td>Collection</td>
+                  <td>CA7-Books on CD</td>
+                  <td>CS 7 - Oversize</td>
+                  <td>NA-Neighborhood Resource Center</td>
+                  <td>NC-Children's-Newbery/Caldecott</td>
+                </tr>
+                <tr>
+                  <td>CheckoutDateTime</td>
+                  <td>12:00 - 14:59</td>
+                  <td>12:00 - 14:59</td>
+                  <td>12:00 - 14:59</td>
+                  <td>12:00 - 14:59</td>
+                </tr>
+                <tr>
+                  <td>Season</td>
+                  <td>Winter</td>
+                  <td>Winter</td>
+                  <td>Winter</td>
+                  <td>Winter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">*Attribute and value do not match</div>
+      </div>
+      
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Value
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>Cluster 0</th>
+                  <th>Cluster 1</th>
+                  <th>Cluster 2</th>
+                  <th>Cluster 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ItemType</td>
+                  <td>4.3097</td>
+                  <td>4.2948</td>
+                  <td>183.75</td>
+                  <td>416.4683</td>
+                </tr>
+                <tr>
+                  <td>Collection</td>
+                  <td>265.8604</td>
+                  <td>106.9494</td>
+                  <td>163.25</td>
+                  <td>459.2171</td>
+                </tr>
+                <tr>
+                  <td>CheckoutDateTime</td>
+                  <td>3.8319</td>
+                  <td>3.8468</td>
+                  <td>3.75</td>
+                  <td>3.8072</td>
+                </tr>
+                <tr>
+                  <td>Season</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td>3</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted"></div>
+      </div>
+      
+        
+      
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright of APA? PDB 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  </div>
+  
+	
+	<div th:replace="resources :: javascripts"></div>
+</body>
+
+<script>
+Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+Chart.defaults.global.defaultFontColor = "#292b2c";
+
+var ctx = document.getElementById("myPieChart"), 
+		myPieChart = new Chart(
+		ctx, {
+			type : "pie",
+			data : {
+				labels : [ "Cluster 0", "Cluster 1", "Cluster 2", "Cluster 3"],
+				datasets : [ {
+					data : [ 60, 8, 0, 32],
+					backgroundColor : [ "#007bff", "#dc3545", "#ffc107",
+							"#28a745"]
+				} ]
+			}
+		});
+</script>
+
+</html>
