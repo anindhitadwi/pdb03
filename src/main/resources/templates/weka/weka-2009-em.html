@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>Weka Statistics 2005 - EM</title>
+	<title>Weka Statistics 2009 - EM</title>
 	<div th:replace="resources :: assets"></div>
 </head>
 
@@ -15,7 +15,7 @@
     <!-- Breadcrumbs-->
       <ol class="breadcrumb">
         <li class="breadcrumb-item">Weka Statistics</li>
-        <li class="breadcrumb-item">2005</li>
+        <li class="breadcrumb-item">2009</li>
         <li class="breadcrumb-item">EM</li>
       </ol>
     
@@ -49,41 +49,45 @@
                   <th>Cluster 2</th>
                   <th>Cluster 3</th>
                   <th>Cluster 4</th>
+                  <th>Cluster 5</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>ItemType</td>
-                  <td>Kit: Adult/YA</td>
-                  <td>Catalog*</td>
-                  <td>Book: Adult/YA</td>
-                  <td>DVD: Juv Circulation</td>
-                  <td>CH1-Children's Seasonal*</td>
+                  <td>Book</td>
+                  <td>Book</td>
+                  <td>Book</td>
+                  <td>Book</td>
+                  <td>Data Disc</td>
+                  <td>Data Disc</td>
                 </tr>
                 <tr>
                   <td>Collection</td>
-                  <td>CS 3 - MOB Mysteries</td>
-                  <td>Staff Operation on Process</td>
-                  <td>NA-Sci-Fi/Fantasy</td>
-                  <td>CC-Children's Easy Fiction</td>
-                  <td>NC-Easy Fiction</td>
+                  <td>Afam - Juv. Video</td>
+                  <td>WTBBL-Standard Book</td>
+                  <td>NC-Children's Comics</td>
+                  <td>Peak Picks Fiction</td>
+                  <td>NA-Paperbacks</td>
+                  <td>NA-Sci-Fic/Fantasy</td>
                 </tr>
                 <tr>
                   <td>CheckoutDateTime</td>
                   <td>15:00 - 17:59</td>
-                  <td>12:00 - 14:59</td>
                   <td>15:00 - 17:59</td>
-                  <td>12:00 - 14:59</td>
-                  <td>12:00 - 14:59</td>
+                  <td>15:00 - 17:59</td>
+                  <td>15:00 - 17:59</td>
+                  <td>15:00 - 17:59</td> 
+                  <td>15:00 - 17:59</td>
                 </tr>
                 <tr>
                   <td>Season</td>
+                  <td>fall</td>
+                  <td>fall</td>
                   <td>Summer</td>
-                  <td>Summer</td>
-                  <td>Summer</td>
-                  <td>Summer</td>
-                  <td>Summer</td>
-                </tr>
+                  <td>fall</td>
+                  <td>fall</td>
+               <td>Spring</td> </tr>
               </tbody>
             </table>
           </div>
@@ -106,40 +110,45 @@
                   <th>Cluster 2</th>
                   <th>Cluster 3</th>
                   <th>Cluster 4</th>
+                 <th>Cluster 5</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>ItemType</td>
-                  <td>11.5246</td>
-                  <td>184.6598</td>
-                  <td>2.5967</td>
-                  <td>420.6062</td>
-                  <td>416.0149</td>
+                  <td>417.023</td>
+                  <td>102.2016</td>
+                  <td>416.9817</td>
+                  <td>2.6979</td>
+                  <td>6.9682</td>
+                  <td>6.0408</td>
                 </tr>
                 <tr>
                   <td>Collection</td>
-                  <td>229.3726</td>
-                  <td>190.6148</td>
-                  <td>241.7913</td>
-                  <td>454.2172</td>
-                  <td>461.5839</td>
+                  <td>458.156</td>
+                  <td>204.485</td>
+                  <td>460.1108</td>
+                  <td>244.8089</td>
+                  <td>240.6214</td>
+                  <td>241.8828</td>
                 </tr>
                 <tr>
                   <td>CheckoutDateTime</td>
-                  <td>4.5899</td>
-                  <td>4.0041</td>
-                  <td>4.5381</td>
-                  <td>4.4895</td>
-                  <td>4.4785</td>
+                  <td>4.5233</td>
+                  <td>4.5282</td>
+                  <td>4.5298</td>
+                  <td>4.5978</td>
+                  <td>4.5486</td>
+                  <td>4.6118</td>
                 </tr>
                 <tr>
                   <td>Season</td>
-                  <td>1.3981</td>
-                  <td>1.3937</td>
-                  <td>1.4786</td>
-                  <td>1.4527</td>
-                  <td>1.4837</td>
+                  <td>2.4843</td>
+                  <td>1.542</td>
+                  <td>0.5448</td>
+                  <td>1.5274</td>
+                  <td>2.4767</td>
+                  <td>0.459</td>
                 </tr>
               </tbody>
             </table>
@@ -156,47 +165,52 @@
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
-                <tr>
+       <tr>
                   <th>Attribute</th>
                   <th>Cluster 0</th>
                   <th>Cluster 1</th>
                   <th>Cluster 2</th>
                   <th>Cluster 3</th>
                   <th>Cluster 4</th>
+                 <th>Cluster 5</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>ItemType</td>
-                  <td>7.5145</td>
-                  <td>133.6202</td>
-                  <td>0.9396</td>
-                  <td>2.7616</td>
-                  <td>0.1214</td>
+                  <td>1.6933</td>
+                  <td>123.9159</td>
+                  <td>1.7372</td>
+                  <td>0.9507</td>
+                  <td>0.3454</td>
+                  <td>2.0037</td>
                 </tr>
                 <tr>
                   <td>Collection</td>
-                  <td>229.3726</td>
-                  <td>190.6148</td>
-                  <td>241.7913</td>
-                  <td>454.2172</td>
-                  <td>461.5839</td>
+                  <td>16.5933</td>
+                  <td>66.0491</td>
+                  <td>15.5231</td>
+                  <td>114.62</td>
+                  <td>19.104</td>
+                  <td>19.6724</td>
                 </tr>
                 <tr>
                   <td>CheckoutDateTime</td>
-                  <td>4.5899</td>
-                  <td>4.0041</td>
-                  <td>4.5381</td>
-                  <td>4.4895</td>
-                  <td>4.4785</td>
+                  <td>0.8647</td>
+                  <td>0.9412</td>
+                  <td>0.8939</td>
+                  <td>0.8617</td>
+                  <td>0.8373</td>
+                  <td>0.896</td>
                 </tr>
                 <tr>
                   <td>Season</td>
-                  <td>1.3981</td>
-                  <td>1.3937</td>
-                  <td>1.4786</td>
-                  <td>1.4527</td>
-                  <td>1.4837</td>
+                  <td>0.5278</td>
+                  <td>1.1768</td>
+                  <td>0.5323</td>
+                  <td>1.1211</td>
+                  <td>0.5422</td>
+                  <td>0.5113</td>
                 </tr>
               </tbody>
             </table>
@@ -237,11 +251,11 @@ var ctx = document.getElementById("myPieChart"),
 		ctx, {
 			type : "pie",
 			data : {
-				labels : [ "Cluster 0", "Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4" ],
+				labels : [ "Cluster 0", "Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5" ],
 				datasets : [ {
-					data : [ 20, 1, 5, 7, 20 ],
+					data : [ 12, 2, 13, 46, 13, 15 ],
 					backgroundColor : [ "#007bff", "#dc3545", "#ffc107",
-							"#28a745", "#add8e6" ]
+							"#28a745", "#add8e6", "#ffec9d" ]
 				} ]
 			}
 		});
