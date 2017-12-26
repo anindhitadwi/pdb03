@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Weka Statistics 2008 - EM</title>
+	<div th:replace="resources :: assets"></div>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <div th:replace="resources :: navigation"></div>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+    <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Weka Statistics</li>
+        <li class="breadcrumb-item">2008</li>
+        <li class="breadcrumb-item">EM</li>
+      </ol>
+    
+    <!-- Area Chart Example-->  
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Example Pie Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-pie-chart"></i>Expectation-Minimization (in %)</div>
+            <div class="card-body">
+              <canvas id="myPieChart" width="100%" height="30"></canvas>
+            </div>
+            <div class="card-footer small text-muted"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Representation
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>Cluster 0</th>
+                  <th>Cluster 1</th>
+                  <th>Cluster 2</th>
+                  <th>Cluster 3</th>
+                  <th>Cluster 4</th>
+                  <th>Cluster 5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ItemType</td>
+                  <td>Audio Tape: Adult/YA</td>
+                  <td>CD: Adult/YA</td>
+                  <td>Framed Art: Adult/YA</td>
+                  <td>Book: Juv</td>
+                  <td>Book: Juv</td>
+                  <td>Equipment: Adult/YA No Hold</td>
+                </tr>
+                <tr>
+                  <td>Collection</td>
+                  <td>CA0-WaAuthors</td>
+                  <td>CS 1 - MOB Large Print Fiction</td>
+                  <td>NY-Teen - Comics and Graphic Novels</td>
+                  <td>CC-Children's Video</td>
+                  <td>NC-Children's-Newbery/Caldecott</td>
+                  <td>CA3-Short Stories</td>
+                </tr>
+                <tr>
+                  <td>CheckoutDateTime</td>
+                  <td>15:00 - 17:59</td>
+                  <td>15:00 - 17:59</td>
+                  <td>15:00 - 17:59</td>
+                  <td>12:00 - 14:59</td>
+                  <td>12:00 - 14:59</td>
+                  <td>15:00 - 17:59</td>
+                </tr>
+                <tr>
+                  <td>Season</td>
+                  <td>Summer</td>
+                  <td>Summer</td>
+                  <td>Summer</td>
+                  <td>Fall</td>
+                  <td>Summer</td>
+                  <td>Winter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted">*Attribute and value do not match</div>
+      </div>
+      
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Mean
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>Cluster 0</th>
+                  <th>Cluster 1</th>
+                  <th>Cluster 2</th>
+                  <th>Cluster 3</th>
+                  <th>Cluster 4</th>
+                  <th>Cluster 5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ItemType</td>
+                  <td>4.2695</td>
+                  <td>4.8831</td>
+                  <td>2.0027</td>
+                  <td>417.2129</td>
+                  <td>417.1063</td>
+                  <td>10.108</td>
+                </tr>
+                <tr>
+                  <td>Collection</td>
+                  <td>223.5771</td>
+                  <td>226.6153</td>
+                  <td>515.6894</td>
+                  <td>457.0507</td>
+                  <td>458.6493</td>
+                  <td>222.0388</td>
+                </tr>
+                <tr>
+                  <td>CheckoutDateTime</td>
+                  <td>4.5921</td>
+                  <td>4.5961</td>
+                  <td>4.75</td>
+                  <td>4.4754</td>
+                  <td>4.4697</td>
+                  <td>4.5632</td>
+                </tr>
+                <tr>
+                  <td>Season</td>
+                  <td>0.6358</td>
+                  <td>1.3558</td>
+                  <td>1.4842</td>
+                  <td>2.4368</td>
+                  <td>0.5613</td>
+                  <td>2.6427</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted"></div>
+      </div>
+      
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Standard Deviation
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>Cluster 0</th>
+                  <th>Cluster 1</th>
+                  <th>Cluster 2</th>
+                  <th>Cluster 3</th>
+                  <th>Cluster 4</th>
+                  <th>Cluster 5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>ItemType</td>
+                  <td>2.1694</td>
+                  <td>3.703</td>
+                  <td>0.0517</td>
+                  <td>2.3642</td>
+                  <td>1.8841</td>
+                  <td>30.133</td>
+                </tr>
+                <tr>
+                  <td>Collection</td>
+                  <td>60.8624</td>
+                  <td>57.6457</td>
+                  <td>3.2174</td>
+                  <td>28.0939</td>
+                  <td>15.7964</td>
+                  <td>62.0583</td>
+                </tr>
+                <tr>
+                  <td>CheckoutDateTime</td>
+                  <td>0.8948</td>
+                  <td>0.8476</td>
+                  <td>0.8292</td>
+                  <td>0.8735</td>
+                  <td>0.9042</td>
+                  <td>0.8606</td>
+                </tr>
+                <tr>
+                  <td>Season</td>
+                  <td>0.6734</td>
+                  <td>0.9157</td>
+                  <td>0.9906</td>
+                  <td>0.5439</td>
+                  <td>0.5402</td>
+                  <td>0.5431</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted"></div>
+      </div>
+      
+      
+    
+      
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright of APA? PDB 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  </div>
+  
+	
+	<div th:replace="resources :: javascripts"></div>
+</body>
+
+<script>
+Chart.defaults.global.defaultFontFamily = '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif',
+Chart.defaults.global.defaultFontColor = "#292b2c";
+
+var ctx = document.getElementById("myPieChart"), 
+		myPieChart = new Chart(
+		ctx, {
+			type : "pie",
+			data : {
+				labels : [ "Cluster 0", "Cluster 1", "Cluster 2", "Cluster 3", "Cluster 4", "Cluster 5" ],
+				datasets : [ {
+					data : [ 35, 33, 4, 13, 12, 4 ],
+					backgroundColor : [ "#007bff", "#dc3545", "#ffc107",
+							"#28a745", "#add8e6", "#ff00ff" ]
+				} ]
+			}
+		});
+</script>
+
+</html>
