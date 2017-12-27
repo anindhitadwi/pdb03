@@ -8,6 +8,30 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class SparkController {
 
+	@RequestMapping("/spark/{year}")
+	public String spark(Model model, @PathVariable(value = "year") String year) {
+		
+		model.addAttribute("year", year);
+		
+		switch(year){
+	    	case "2005" : return "spark/spark-2005";
+	    	case "2006" : return "spark/spark-2006";
+	    	case "2007" : return "spark/spark-2007";
+	    	case "2008" : return "spark/spark-2008";
+	    	case "2009" : return "spark/spark-2009";
+	    	case "2010" : return "spark/spark-2010";
+	    	case "2011" : return "spark/spark-2011";
+	    	case "2012" : return "spark/spark-2012";
+	    	case "2013" : return "spark/spark-2013";
+	    	case "2014" : return "spark/spark-2014";
+	    	case "2015" : return "spark/spark-2015";
+	    	case "2016" : return "spark/spark-2016";
+	    	case "2017" : return "spark/spark-2017";
+	    }
+		
+		return "error";
+	}
+	
 	@RequestMapping("/spark-fasilkom/{year}")
 	public String sparkFasilkom(Model model, @PathVariable(value = "year") String year) {
 		
@@ -29,7 +53,7 @@ public class SparkController {
 	    	case "2017" : return "spark/spark-2017-fasilkom";
 	    }
 		
-		return "index";
+		return "error";
 	}
 	
 	@RequestMapping("/spark-databricks/{year}")
@@ -53,7 +77,7 @@ public class SparkController {
 	    	case "2017" : return "spark/spark-2017-databricks";
 	    }
 		
-		return "index";
+		return "error";
 	}
 	
 	@RequestMapping("/spark-jupyter/{year}")
@@ -77,7 +101,7 @@ public class SparkController {
 	    	case "2017" : return "spark/spark-2017-jupyter";
 	    }
 		
-		return "index";
+		return "error";
 	}
 	
 }

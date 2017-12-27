@@ -9,13 +9,13 @@ public class PageController {
 	@RequestMapping("/")
 	public String index() {
 		
-		return "index";
+		return "home";
 	}
 	
 	@RequestMapping("/home")
 	public String home() {
 		
-		return "home";
+		return "index";
 	}
 	
 	@RequestMapping("/about")

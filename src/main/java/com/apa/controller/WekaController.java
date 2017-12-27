@@ -36,7 +36,7 @@ public class WekaController {
 	    	
 	    }
 		
-		return "index";
+		return "error";
 	}
 	
 	@RequestMapping("/weka-skm/{year}")
@@ -61,6 +61,6 @@ public class WekaController {
 	    	
 	    }
 		
-		return "index";
+		return "error";
 	}
 }

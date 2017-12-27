@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Spark WSSSE 2005</title>
+	<div th:replace="resources :: assets"></div>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <div th:replace="resources :: navigation"></div>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+    
+    <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">Spark WSSSE</li>
+        <li class="breadcrumb-item">2005</li>
+      </ol>
+    
+    <!-- Area Chart Example--> 
+      
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Within Set Sum of Squared Error
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Number of Cluster</th>
+                  <th>WSSSE</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>755473971.6641672</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>173287921.85086743</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>122922054.57307251</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>119807818.42992271</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>88225830.6764011</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>55464110.63735291</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="card-footer small text-muted"></div>
+      </div>
+      
+      
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright of APA? PDB 2017</small>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+  </div>
+  
+	
+	<div th:replace="resources :: javascripts"></div>
+</body>
+
+</html>
