@@ -12,6 +12,12 @@ public class PageController {
 		return "index";
 	}
 	
+	@RequestMapping("/about")
+	public String about() {
+		
+		return "about";
+	}
+	
 	@RequestMapping("/test")
 	public String test() {
 		

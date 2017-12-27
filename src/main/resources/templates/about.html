@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Weka Statistics 2005 - EM</title>
+	<div th:replace="resources :: assets"></div>
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <div th:replace="resources :: navigation"></div>
+  
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      
+      <div background="img/header-bg.jpg">
+      	<div class="row">
+		  <div class="col-12">
+			<div class="card mb-3">
+			  <div class="card-header">
+			    <i class="fa fa-file"></i> About Project</div>
+			  <div class="card-body">
+			    <p>This app is a project created for showing the analysis of 
+			    Seattle Public Library dataset from several tools, which are 
+			    Weka, Tensorflow, and Spark.</p>
+			    <p>Original dataset can be accessed through https://www.kaggle.com/seattle-public-library/seattle-library-checkout-records</p>
+			    <p>Datasets were preprocessed using tools such as Hue and custom Java application.
+			    For the Weka Statistics, records from the datasets were cut down from the original number to 10,000 per year to match the capability of Weka.</p>
+			  </div>
+			  <div class="card-footer small text-muted"></div>
+			</div>
+			
+			<div class="card mb-3">
+			  <div class="card-header">
+			    <i class="fa fa-file"></i> About Apa?</div>
+			  <div class="card-body">
+			  	<p>
+			  		Apa? is the developer team of Seattle Public Library Cluster Analysis App. 
+			  		This team consist of students from Big Data Management course of Faculty of Computer Science Universitas Indonesia. Below are the members of Apa?
+			  	</p>
+			    <ul>
+			    	<li>Anindhita Dwi Saraswati</li>
+			    	<li>Annissa Fildzah R. P.</li>
+			    	<li>Ibad Rahadian Saladdin</li>
+			    	<li>S. Reyneta Carissa Anwar</li>
+			    	<li>Widiarto Adiyoso W. W.</li>
+			    </ul>
+			  </div>
+			  <div class="card-footer small text-muted"></div>
+			</div>
+		  </div>
+		</div>
+    
+	    <!-- /.container-fluid-->
+	    <!-- /.content-wrapper-->
+	    
+	    <footer class="sticky-footer">
+	      <div class="container">
+	        <div class="text-center">
+	          <small>Copyright of APA? PDB 2017</small>
+	        </div>
+	      </div>
+	    </footer>
+	    
+	    <!-- Scroll to Top Button-->
+	    
+	    <a class="scroll-to-top rounded" href="#page-top">
+	      <i class="fa fa-angle-up"></i>
+	    </a>
+      </div>
+      
+	<div th:replace="resources :: javascripts"></div>
+	</div>
+	</div>
+</body>
+</html>
