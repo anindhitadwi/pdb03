@@ -56,4 +56,28 @@ public class SparkController {
 		return "index";
 	}
 	
+	@RequestMapping("/spark-jupyter/{year}")
+	public String sparkJupyter(Model model, @PathVariable(value = "year") String year) {
+		
+		model.addAttribute("year", year);
+		
+		switch(year){
+			case "2005" : return "spark/spark-2005-jupyter";
+	    	case "2006" : return "spark/spark-2006-jupyter";
+	    	case "2007" : return "spark/spark-2007-jupyter";
+	    	case "2008" : return "spark/spark-2008-jupyter";
+	    	case "2009" : return "spark/spark-2009-jupyter";
+	    	case "2010" : return "spark/spark-2010-jupyter";
+	    	case "2011" : return "spark/spark-2011-jupyter";
+	    	case "2012" : return "spark/spark-2012-jupyter";
+	    	case "2013" : return "spark/spark-2013-jupyter";
+	    	case "2014" : return "spark/spark-2014-jupyter";
+	    	case "2015" : return "spark/spark-2015-jupyter";
+	    	case "2016" : return "spark/spark-2016-jupyter";
+	    	case "2017" : return "spark/spark-2017-jupyter";
+	    }
+		
+		return "index";
+	}
+	
 }
